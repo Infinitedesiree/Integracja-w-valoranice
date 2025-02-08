@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moja Walentynka? ❤️</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+            padding: 50px;
+        }
+        h1 {
+            color: #ff4d4d;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .yes {
+            background-color: #ff4d4d;
+            color: white;
+        }
+        .yes:hover {
+            background-color: #ff1a1a;
+        }
+        .no {
+            background-color: #ffffff;
+            color: #ff4d4d;
+            border: 2px solid #ff4d4d;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Czy zostaniesz moją Walentynką? ❤️</h1>
+    <div class="container">
+        <button class="yes" onclick="yesAnswer()">Tak! 🥰</button>
+        <button class="no" id="noButton" onmouseover="moveNoButton()">Nie... 😢</button>
+    </div>
+
+    <script>
+        function yesAnswer() {
+            alert("Hurra! 🥰 Dziękuje!");
+        }
+
+        function moveNoButton() {
+            let button = document.getElementById("noButton");
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 100);
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        }
+    </script>
+
+</body>
+</html>
