@@ -3,142 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Integracja Valorant 4v4</title>
+    <title>Moja Walentynka? ❤️</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f9f2f8;
-            margin: 0;
-            padding: 0;
-            color: #444;
-        }
-        header {
             text-align: center;
-            padding: 20px;
-            background-color: #ffe4e9;
-        }
-        header img {
-            max-width: 200px;
-            border-radius: 10px;
+            background-color: #ffe6e6;
+            padding: 50px;
         }
         h1 {
-            font-size: 2.5rem;
-            color: #d174ac;
-            margin: 10px 0;
-        }
-        nav {
-            background-color: #d174ac;
-            text-align: center;
-            padding: 10px 0;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.2rem;
-        }
-        nav a:hover {
-            text-decoration: underline;
+            color: #ff4d4d;
         }
         .container {
-            width: 80%;
-            margin: auto;
-            padding: 20px;
-            background: white;
+            margin-top: 50px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
         }
-        .section {
-            margin-bottom: 20px;
+        .yes {
+            background-color: #ff4d4d;
+            color: white;
         }
-        .section h2 {
-            font-size: 1.8rem;
-            color: #a64d79;
-            border-bottom: 2px solid #d174ac;
-            padding-bottom: 5px;
-            margin-bottom: 10px;
+        .yes:hover {
+            background-color: #ff1a1a;
         }
-        .teams, .schedule {
-            display: flex;
-            justify-content: space-between;
-            gap: 10px;
-        }
-        .team, .match {
-            flex: 1;
-            background-color: #ffeaf0;
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #ffe4e9;
-            margin-top: 20px;
+        .no {
+            background-color: #ffffff;
+            color: #ff4d4d;
+            border: 2px solid #ff4d4d;
+            position: absolute;
         }
     </style>
 </head>
 <body>
-    <header>
-        <img src="logo.png" alt="Infinite Desire Logo">
-        <h1>Integracja Valorant 4v4</h1>
-    </header>
-    <nav>
-        <a href="index.html">Strona główna</a>
-        <a href="nagrody.html">Rozpiska nagród</a>
-    </nav>
+
+    <h1>Czy zostaniesz moją Walentynką? ❤️</h1>
     <div class="container">
-        <div class="section">
-            <h2>Harmonogram</h2>
-            <div class="schedule">
-                <div class="match">
-                    <strong>Mecz 1:</strong><br>
-                    Drużyna A vs Drużyna B<br>
-                    Godzina: -
-                </div>
-                <div class="match">
-                    <strong>Mecz 2:</strong><br>
-                    Drużyna C vs Drużyna D<br>
-                    Godzina: -
-                </div>
-            </div>
-        </div>
-        <div class="section">
-            <h2>Drużyny</h2>
-            <div class="teams">
-                <div class="team">
-                    <strong>Drużyna A</strong><br>
-                    - Gracz 1<br>
-                    - Gracz 2<br>
-                    - Gracz 3<br>
-                    - Gracz 4
-                </div>
-                <div class="team">
-                    <strong>Drużyna B</strong><br>
-                    - Gracz 5<br>
-                    - Gracz 6<br>
-                    - Gracz 7<br>
-                    - Gracz 8
-                </div>
-                <div class="team">
-                    <strong>Drużyna C</strong><br>
-                    - Gracz 9<br>
-                    - Gracz 10<br>
-                    - Gracz 11<br>
-                    - Gracz 12
-                </div>
-                <div class="team">
-                    <strong>Drużyna D</strong><br>
-                    - Gracz 13<br>
-                    - Gracz 14<br>
-                    - Gracz 15<br>
-                    - Gracz 16
-                </div>
-            </div>
-        </div>
+        <button class="yes" onclick="yesAnswer()">Tak! 🥰</button>
+        <button class="no" id="noButton" onmouseover="moveNoButton()">Nie... 😢</button>
     </div>
-    <footer>
-        <p>Wszystkie prawa zastrzeżone 𝑰𝒏𝒇𝒊𝒏𝒊𝒕𝒆 𝒅𝒆𝒔𝒊𝒓𝒆 &copy; 2025</p>
-    </footer>
+
+    <script>
+        function yesAnswer() {
+            alert("Hurra! 🥰 Nie mogę się doczekać naszej walentynki!");
+        }
+
+        function moveNoButton() {
+            let button = document.getElementById("noButton");
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 100);
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        }
+    </script>
+
 </body>
 </html>
